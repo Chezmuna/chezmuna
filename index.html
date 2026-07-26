@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chezmuna Enterprises | Executive Commodity Facilitation & Industrial Sourcing</title>
+    <title>Chezmuna Enterprises | Direct Trade Facilitation & Industrial Sourcing</title>
+    <meta name="description" content="Chezmuna Enterprises: direct principal-to-principal facilitation for Grade-A DRC copper cathodes, plus local and international industrial raw material sourcing including kraft paper feedstock.">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -49,13 +50,18 @@
         .gold-glow {
             box-shadow: 0 0 50px -10px rgba(234, 179, 8, 0.15);
         }
-        /* Active Navigation Link Styling */
         .nav-link.active {
             color: #facc15 !important;
             font-weight: 700;
             border-bottom: 2px solid #facc15;
             padding-bottom: 2px;
         }
+        .tab-btn.active {
+            background: #facc15;
+            color: #030712;
+        }
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
     </style>
 </head>
 <body class="bg-brand-950 text-slate-300 font-sans antialiased selection:bg-gold-500 selection:text-brand-950">
@@ -69,7 +75,7 @@
                 </span>
                 <span class="border-r border-slate-800 pr-6">LME Copper Grade-A: <span class="text-emerald-400 font-mono font-bold">$9,840.00 / MT (+1.2%)</span></span>
                 <span class="border-r border-slate-800 pr-6">Protocol: <span class="text-white font-mono">ICC UCP 600 / DLC / LC</span></span>
-                <span>Verification: <span class="text-gold-400 font-mono">Pre-DLC Physical Inspection (SGS / Alex Stewart)</span></span>
+                <span>Divisions: <span class="text-gold-400 font-mono">Copper Cathodes · Industrial Raw Materials</span></span>
             </div>
             <div class="font-mono text-slate-500">REG: BN: OG 6817</div>
         </div>
@@ -87,12 +93,12 @@
                     <span class="text-[9px] tracking-[0.25em] text-gold-400 uppercase font-bold">Enterprises</span>
                 </div>
             </a>
-            
-            <!-- Navigation Links -->
+
             <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium">
-                <a href="#about" class="nav-link text-slate-300 hover:text-white transition">Institutional Profile</a>
-                <a href="#sourcing" class="nav-link text-slate-300 hover:text-white transition">Industrial Sourcing Matrix</a>
-                <a href="#compliance" class="nav-link text-slate-300 hover:text-white transition">Risk & Compliance</a>
+                <a href="#about" class="nav-link text-slate-300 hover:text-white transition">Profile</a>
+                <a href="#divisions" class="nav-link text-slate-300 hover:text-white transition">Divisions</a>
+                <a href="#specialties" class="nav-link text-slate-300 hover:text-white transition">Specialties</a>
+                <a href="#compliance" class="nav-link text-slate-300 hover:text-white transition">Compliance</a>
                 <a href="#calculator" class="nav-link text-slate-300 hover:text-white transition">Trade Desk</a>
             </nav>
 
@@ -105,7 +111,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="relative pt-24 pb-20 lg:pt-36 lg:pb-32 overflow-hidden border-b border-white/5">
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-500/10 blur-[140px] rounded-full pointer-events-none"></div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
@@ -116,42 +122,39 @@
                         <span class="text-xs font-semibold uppercase tracking-widest text-gold-400">Direct Principal Facilitation Desk</span>
                     </div>
                     <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.1] mb-8">
-                        Facilitating High-Volume <span class="gold-gradient-text">Commodity Transactions</span> across Global Markets.
+                        Two Trade Lines. <span class="gold-gradient-text">One Direct Desk.</span>
                     </h1>
                     <p class="text-lg text-slate-400 leading-relaxed mb-10 max-w-2xl">
-                        Chezmuna Enterprises bridges primary mining concession holders, authorized refiners, and multinational industrial buyers through clean, risk-mitigated corporate channels. Specializing in Grade-A DRC Copper Cathodes and structured local/international raw material procurement.
+                        Chezmuna Enterprises facilitates direct, principal-to-principal transactions in Grade-A DRC copper cathodes, and separately manages sourcing of local and international industrial raw materials — including kraft paper feedstock — for manufacturing and processing operations.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <!-- Active Button: Navigates to Form -->
                         <a href="#contact" class="bg-gold-500 hover:bg-gold-400 text-brand-950 font-bold px-8 py-4 rounded-xl text-center transition shadow-xl shadow-gold-500/20 text-sm tracking-wide">
-                            Submit Official SCO Request
+                            Submit Trade Inquiry
                         </a>
-                        <!-- Active Button: Navigates to Matrix -->
-                        <a href="#sourcing" class="glass-panel hover:bg-white/10 text-white font-semibold px-8 py-4 rounded-xl text-center transition text-sm">
-                            View Commodity Matrix
+                        <a href="#divisions" class="glass-panel hover:bg-white/10 text-white font-semibold px-8 py-4 rounded-xl text-center transition text-sm">
+                            View Both Divisions
                         </a>
                     </div>
                 </div>
 
-                <!-- Right High-Value Highlights Card -->
                 <div class="lg:col-span-5">
                     <div class="glass-panel p-8 rounded-3xl gold-glow relative">
                         <div class="absolute -top-3 right-6 bg-gold-500 text-brand-950 text-[10px] uppercase font-black tracking-widest px-3 py-1 rounded-full shadow-md">
-                            Authorized Sales Partner
+                            Authorized Sales Agent
                         </div>
                         <h3 class="text-xs uppercase tracking-widest text-slate-400 font-bold mb-6">Primary Mandate Allocation</h3>
-                        
+
                         <div class="space-y-6">
                             <div class="p-4 rounded-xl bg-brand-900/80 border border-white/5">
                                 <span class="text-xs text-gold-400 font-semibold uppercase block mb-1">Non-Ferrous Flagship</span>
                                 <div class="text-xl font-bold text-white mb-1">Grade-A Electrolytic Copper Cathodes</div>
-                                <p class="text-xs text-slate-400">99.99%–99.999% Purity (Non-LME Registered). Facilitating 1,000 MT trial cargoes up to 10,000 MT/month rolling contracts.</p>
+                                <p class="text-xs text-slate-400">99.99%–99.999% purity. 1,000 MT trial cargoes, up to 10,000 MT/month rolling contracts.</p>
                             </div>
 
                             <div class="p-4 rounded-xl bg-brand-900/80 border border-white/5">
-                                <span class="text-xs text-gold-400 font-semibold uppercase block mb-1">Authorized Channel Partner</span>
+                                <span class="text-xs text-gold-400 font-semibold uppercase block mb-1">Authorized Channel</span>
                                 <div class="text-base font-bold text-white mb-1">Shire Mines SPRL (DRC)</div>
-                                <p class="text-xs text-slate-400">Represented via Misk Investments Limited under verified corporate power of attorney and direct mine allocation.</p>
+                                <p class="text-xs text-slate-400">Represented via Misk Investments Limited (Kenya) under corporate mandate.</p>
                             </div>
 
                             <div class="grid grid-cols-2 gap-3 pt-2 text-center">
@@ -171,7 +174,7 @@
         </div>
     </section>
 
-    <!-- Section 1: Institutional Profile -->
+    <!-- Institutional Profile -->
     <section id="about" class="py-24 bg-brand-900 border-b border-white/5 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -179,10 +182,10 @@
                     <h2 class="text-xs font-bold uppercase tracking-widest text-gold-400 mb-3">Institutional Profile</h2>
                     <h3 class="text-3xl font-extrabold text-white mb-6">Executive Trade Advisory & Corporate Sourcing Desk</h3>
                     <p class="text-slate-300 mb-4 leading-relaxed">
-                        Headquartered in Lagos, Nigeria, and established in 2009, <strong class="text-white">Chezmuna Enterprises (BN: OG 6817)</strong> operates as an executive trade facilitation firm. We eliminate non-verifiable intermediary chains by executing transactions on clean, principal-to-principal channels.
+                        Headquartered in Lagos, Nigeria, and established in 2009, <strong class="text-white">Chezmuna Enterprises (BN: OG 6817)</strong> operates as an executive trade facilitation firm. We work on clean, principal-to-principal channels across two distinct trade lines.
                     </p>
                     <p class="text-slate-300 mb-6 leading-relaxed">
-                        Currently serving as an authorized sales partner for <strong>Shire Mines SPRL (DRC)</strong> via <em>Misk Investments Limited</em>, we deliver complete commercial transparency for high-volume transactions of Non-LME Registered Grade-A Electrolytic Copper Cathodes (99.99%–99.999% purity), alongside local and international industrial raw material procurement.
+                        As authorized sales agent, we act on behalf of <strong>Misk Investments Limited (Kenya)</strong>, mandate holder for Shire Mines SPRL (DRC), for high-volume transactions of Non-LME Registered Grade-A Electrolytic Copper Cathodes (99.99%–99.999% purity). Separately, we run our own local and international industrial raw material procurement desk, covering feedstocks such as kraft paper and processed non-ferrous scrap.
                     </p>
                     <div class="grid grid-cols-3 gap-4 pt-4 border-t border-white/10">
                         <div>
@@ -190,8 +193,8 @@
                             <span class="text-[10px] text-slate-400 uppercase tracking-wider">Established</span>
                         </div>
                         <div>
-                            <span class="block text-2xl font-bold text-white font-mono">99.99%</span>
-                            <span class="text-[10px] text-slate-400 uppercase tracking-wider">Copper Purity</span>
+                            <span class="block text-2xl font-bold text-white font-mono">2</span>
+                            <span class="text-[10px] text-slate-400 uppercase tracking-wider">Trade Divisions</span>
                         </div>
                         <div>
                             <span class="block text-2xl font-bold text-gold-400 font-mono">UCP 600</span>
@@ -206,7 +209,7 @@
                     <ul class="space-y-4">
                         <li class="flex items-start gap-3 text-slate-300 text-sm">
                             <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
-                            <span><strong>Direct Mandates:</strong> Direct corporate authorization with primary mining concession holders and smelting operators.</span>
+                            <span><strong>Direct Mandates:</strong> Direct corporate authorization on the copper line; direct buyer relationships on the raw materials line.</span>
                         </li>
                         <li class="flex items-start gap-3 text-slate-300 text-sm">
                             <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
@@ -222,73 +225,151 @@
         </div>
     </section>
 
-    <!-- Section 2: Industrial Sourcing Matrix -->
-    <section id="sourcing" class="py-24 border-b border-white/5 scroll-mt-20">
+    <!-- Divisions (tabbed) -->
+    <section id="divisions" class="py-24 border-b border-white/5 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="max-w-3xl mb-16">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-gold-400 mb-3">Structured Procurement</h2>
-                <h3 class="text-3xl md:text-4xl font-extrabold text-white">Industrial Sourcing Matrix</h3>
+            <div class="max-w-3xl mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-gold-400 mb-3">Two Trade Lines</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-white">Our Divisions</h3>
                 <p class="text-slate-400 mt-4 leading-relaxed">
-                    Chezmuna Enterprises manages dedicated corporate channels for securing essential industrial raw materials—supplying both domestic African processing plants and multinational industrial supply chains.
+                    Copper cathode facilitation and industrial raw material sourcing are run as separate desks, each with its own buyers, documentation, and process.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Local Sourcing Hub (Nigeria) -->
-                <div class="glass-panel p-8 rounded-2xl border-l-4 border-l-gold-500 relative overflow-hidden group">
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-xl">
+            <!-- Tab buttons -->
+            <div class="flex flex-wrap gap-3 mb-10">
+                <button onclick="switchTab('copper')" id="tab-btn-copper" class="tab-btn active px-6 py-3 rounded-xl text-sm font-bold uppercase tracking-wide border border-white/10 transition">
+                    <i class="fa-solid fa-bolt mr-2"></i>Copper Cathodes
+                </button>
+                <button onclick="switchTab('rawmat')" id="tab-btn-rawmat" class="tab-btn px-6 py-3 rounded-xl text-sm font-bold uppercase tracking-wide border border-white/10 transition bg-white/5 text-white">
+                    <i class="fa-solid fa-industry mr-2"></i>Industrial Raw Materials
+                </button>
+            </div>
+
+            <!-- Copper Panel -->
+            <div id="panel-copper" class="tab-panel active">
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="glass-panel p-8 rounded-2xl border-l-4 border-l-gold-500">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white mb-3">Grade-A DRC Copper Cathodes</h4>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                            Direct facilitation for Non-LME Registered Electrolytic Copper Cathodes, 99.99%–99.999% purity, sourced via authorized mandate from Shire Mines SPRL (DRC).
+                        </p>
+                        <ul class="space-y-3 text-sm text-slate-300 font-medium">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400 text-xs"></i> 1,000 MT trial cargoes; up to 10,000 MT/month rolling contracts</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400 text-xs"></i> Pre-DLC physical inspection via SGS / Alex Stewart</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400 text-xs"></i> CIF/FOB delivery via Dar es Salaam, Durban, Beira</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400 text-xs"></i> ICC UCP 600 DLC/LC settlement</li>
+                        </ul>
+                    </div>
+                    <div class="glass-panel p-8 rounded-2xl border border-white/10">
+                        <h4 class="text-lg font-bold text-white mb-4">Standard Process</h4>
+                        <ol class="space-y-3 text-sm text-slate-300">
+                            <li><span class="text-gold-400 font-mono font-bold mr-2">1</span>Buyer issues LOI / ICPO</li>
+                            <li><span class="text-gold-400 font-mono font-bold mr-2">2</span>Seller issues FCO; both principals execute SPA</li>
+                            <li><span class="text-gold-400 font-mono font-bold mr-2">3</span>Buyer's technical team inspects cargo on-site (Kinshasa)</li>
+                            <li><span class="text-gold-400 font-mono font-bold mr-2">4</span>Buyer's bank issues DLC under UCP 600</li>
+                            <li><span class="text-gold-400 font-mono font-bold mr-2">5</span>Export clearance, port assay, vessel loading</li>
+                            <li><span class="text-gold-400 font-mono font-bold mr-2">6</span>Bank-to-bank settlement against shipping/analytical docs</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Raw Materials Panel -->
+            <div id="panel-rawmat" class="tab-panel">
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="glass-panel p-8 rounded-2xl border-l-4 border-l-blue-500">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl mb-6">
                             <i class="fa-solid fa-industry"></i>
                         </div>
-                        <span class="text-[10px] font-mono uppercase bg-white/5 px-3 py-1 rounded-full border border-white/10 text-slate-300">Domestic Hub</span>
+                        <h4 class="text-2xl font-bold text-white mb-3">Industrial Raw Material Sourcing</h4>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                            End-to-end procurement for domestic and regional manufacturing plants, covering feedstock lines including kraft paper and processed non-ferrous metal.
+                        </p>
+                        <ul class="space-y-3 text-sm text-slate-300 font-medium">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-400 text-xs"></i> Kraft paper feedstock & recovered paper logistics for packaging plants</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-400 text-xs"></i> Processed non-ferrous metal & industrial scrap supply lines</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-400 text-xs"></i> Local sourcing within Nigeria; regional sourcing across African corridors</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-400 text-xs"></i> Quality testing and factory-gate delivery coordination</li>
+                        </ul>
                     </div>
-                    <h4 class="text-2xl font-bold text-white mb-3">Local Raw Material Sourcing (Nigeria)</h4>
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                        End-to-end procurement and supply chain management for domestic industrial plants, processing facilities, and manufacturing concerns within Nigeria.
-                    </p>
-                    <ul class="space-y-3 text-sm text-slate-300 font-medium">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400 text-xs"></i> Direct industrial scrap & processed non-ferrous metal supply lines</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400 text-xs"></i> Bulk paper feedstock & Kraft recovery logistics for packaging industries</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400 text-xs"></i> Verifiable quality testing and factory-gate delivery coordination</li>
-                    </ul>
-                </div>
-
-                <!-- International Sourcing Hub -->
-                <div class="glass-panel p-8 rounded-2xl border-l-4 border-l-blue-500 relative overflow-hidden group">
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl">
-                            <i class="fa-solid fa-ship"></i>
+                    <div class="glass-panel p-8 rounded-2xl border border-white/10">
+                        <h4 class="text-lg font-bold text-white mb-4">Sourcing Coverage</h4>
+                        <div class="space-y-4">
+                            <div class="p-4 rounded-xl bg-brand-900/60 border border-white/5">
+                                <span class="text-xs text-blue-400 font-semibold uppercase block mb-1">Domestic Hub</span>
+                                <p class="text-sm text-slate-300">Direct procurement for Nigerian processing and manufacturing plants — factory-gate delivery, verifiable testing.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-brand-900/60 border border-white/5">
+                                <span class="text-xs text-blue-400 font-semibold uppercase block mb-1">Cross-Border Corridors</span>
+                                <p class="text-sm text-slate-300">Sourcing across Sub-Saharan trade corridors, with export documentation and logistics coordination.</p>
+                            </div>
                         </div>
-                        <span class="text-[10px] font-mono uppercase bg-white/5 px-3 py-1 rounded-full border border-white/10 text-slate-300">Cross-Border Corridors</span>
                     </div>
-                    <h4 class="text-2xl font-bold text-white mb-3">International Commodity Sourcing</h4>
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                        Direct access to primary mining concessions and refined non-ferrous metals across key Sub-Saharan trading corridors for global export.
-                    </p>
-                    <ul class="space-y-3 text-sm text-slate-300 font-medium">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-400 text-xs"></i> Primary DRC Copper Cathodes (99.99% Grade-A) trial & rolling contracts</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-400 text-xs"></i> Streamlined transit via Dar es Salaam, Durban, and Beira ports</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-400 text-xs"></i> Complete legal integrity: Fresh CR12 extracts, mining mandates, and export documentation</li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 3: Risk & Compliance -->
-    <section id="compliance" class="py-24 bg-brand-900 border-b border-white/5 scroll-mt-20">
+    <!-- Specialties -->
+    <section id="specialties" class="py-24 bg-brand-900 border-b border-white/5 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-gold-400 mb-3">Specialties</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-white">What We Focus On</h3>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-panel p-6 rounded-2xl border border-white/10">
+                    <i class="fa-solid fa-handshake text-gold-400 text-xl mb-4"></i>
+                    <h4 class="text-white font-bold mb-2">Direct Principal Facilitation</h4>
+                    <p class="text-sm text-slate-400">Clean, principal-to-principal engagement without unverified intermediary chains.</p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl border border-white/10">
+                    <i class="fa-solid fa-earth-africa text-gold-400 text-xl mb-4"></i>
+                    <h4 class="text-white font-bold mb-2">DRC Copper Logistics</h4>
+                    <p class="text-sm text-slate-400">Cargo, port, and inspection coordination across DRC export corridors.</p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl border border-white/10">
+                    <i class="fa-solid fa-scale-balanced text-gold-400 text-xl mb-4"></i>
+                    <h4 class="text-white font-bold mb-2">International Trade Compliance</h4>
+                    <p class="text-sm text-slate-400">Documentation integrity, chain-of-custody, and regulatory alignment.</p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl border border-white/10">
+                    <i class="fa-solid fa-file-contract text-gold-400 text-xl mb-4"></i>
+                    <h4 class="text-white font-bold mb-2">ICC UCP 600 Trade Protocols</h4>
+                    <p class="text-sm text-slate-400">Standardized documentary letter of credit structuring and banking flow.</p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl border border-white/10">
+                    <i class="fa-solid fa-boxes-stacked text-gold-400 text-xl mb-4"></i>
+                    <h4 class="text-white font-bold mb-2">Copper Cathode Sourcing</h4>
+                    <p class="text-sm text-slate-400">Grade-A cathode allocation from mandate-verified concession partners.</p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl border border-white/10">
+                    <i class="fa-solid fa-city text-gold-400 text-xl mb-4"></i>
+                    <h4 class="text-white font-bold mb-2">Public-Private Partnerships (PPP)</h4>
+                    <p class="text-sm text-slate-400">Advisory on trade-enabling infrastructure and capital flow structuring.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk & Compliance -->
+    <section id="compliance" class="py-24 border-b border-white/5 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-5">
                     <h2 class="text-xs font-bold uppercase tracking-widest text-gold-400 mb-3">Capital Protection</h2>
                     <h3 class="text-3xl font-extrabold text-white mb-6">Risk & Compliance Protocols</h3>
                     <p class="text-slate-400 leading-relaxed mb-6">
-                        In high-value commodity trade, document alterations and unverified chain-of-custody create critical risks. Chezmuna Enterprises eliminates performance risk through strict institutional compliance.
+                        In high-value commodity trade, document alterations and unverified chain-of-custody create critical risks. Chezmuna Enterprises works within strict institutional compliance on both trade lines.
                     </p>
                     <div class="p-6 rounded-2xl glass-panel border border-white/10">
                         <div class="text-xs font-bold uppercase text-gold-400 mb-2">Zero-Risk Pre-DLC Physical Inspection</div>
                         <p class="text-xs text-slate-300 leading-relaxed">
-                            We grant corporate buyers and independent inspection agencies (SGS / Alex Stewart) direct physical access to sample and inspect cargo in secured Kinshasa bonded facilities **prior** to opening financial instruments.
+                            Corporate buyers and independent inspection agencies (SGS / Alex Stewart) receive direct physical access to sample and inspect cargo in secured Kinshasa bonded facilities prior to opening financial instruments.
                         </p>
                     </div>
                 </div>
@@ -298,23 +379,21 @@
                         <div class="w-10 h-10 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center font-bold font-mono shrink-0">01</div>
                         <div>
                             <h4 class="text-lg font-bold text-white mb-1">Direct Principal-to-Principal Channels</h4>
-                            <p class="text-xs text-slate-400">All contracts, SCOs, and SPA negotiations occur directly between buyer principals and verified concession mandate holders.</p>
+                            <p class="text-xs text-slate-400">Contracts and negotiations occur directly between buyer principals and verified mandate holders.</p>
                         </div>
                     </div>
-
                     <div class="p-6 rounded-xl glass-panel border border-white/5 flex gap-5 items-start">
                         <div class="w-10 h-10 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center font-bold font-mono shrink-0">02</div>
                         <div>
                             <h4 class="text-lg font-bold text-white mb-1">Verified Corporate & Registry Integrity</h4>
-                            <p class="text-xs text-slate-400">Transactions are backed by fresh company registry extracts (CR12), verified tax clearances, and valid mining title extracts.</p>
+                            <p class="text-xs text-slate-400">Documentation is backed by registry extracts, tax clearances, and valid mining title extracts, matched to the correct jurisdiction for each party.</p>
                         </div>
                     </div>
-
                     <div class="p-6 rounded-xl glass-panel border border-white/5 flex gap-5 items-start">
                         <div class="w-10 h-10 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center font-bold font-mono shrink-0">03</div>
                         <div>
                             <h4 class="text-lg font-bold text-white mb-1">Standardized ICC Banking Protocols</h4>
-                            <p class="text-xs text-slate-400">All financial flows operate under ICC UCP 600 standard rules via Documentary Letters of Credit (DLC / LC) issued by top-tier international banks.</p>
+                            <p class="text-xs text-slate-400">Financial flows operate under ICC UCP 600 standard rules via DLC/LC issued by top-tier international banks.</p>
                         </div>
                     </div>
                 </div>
@@ -322,8 +401,8 @@
         </div>
     </section>
 
-    <!-- Section 4: Trade Desk (Calculator) -->
-    <section id="calculator" class="py-24 border-b border-white/5 scroll-mt-20">
+    <!-- Trade Desk (Calculator) -->
+    <section id="calculator" class="py-24 bg-brand-900 border-b border-white/5 scroll-mt-20">
         <div class="max-w-4xl mx-auto px-6">
             <div class="glass-panel p-8 md:p-12 rounded-3xl border border-white/10 gold-glow">
                 <div class="text-center mb-8">
@@ -354,7 +433,7 @@
         </div>
     </section>
 
-    <!-- Section 5: Direct Corporate Engagement & Form Submission -->
+    <!-- Contact / Inquiry -->
     <section id="contact" class="py-24 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-12 gap-12">
@@ -363,7 +442,7 @@
                         <h2 class="text-xs font-bold uppercase tracking-widest text-gold-400 mb-2">Corporate Engagement</h2>
                         <h3 class="text-3xl font-bold text-white">Direct Trade Facilitation Desk</h3>
                         <p class="text-slate-400 text-sm mt-3 leading-relaxed">
-                            To request an official Soft Corporate Offer (SCO), initiate due diligence, or arrange industrial raw material procurement contracts, submit your request directly to our desk.
+                            Select the division that applies to your inquiry — copper cathodes or industrial raw materials — and submit your request directly to our desk.
                         </p>
                     </div>
 
@@ -397,17 +476,27 @@
                                 <a href="tel:+2348060045544" class="text-sm font-semibold text-white hover:text-gold-400 transition">+234 806 004 5544</a>
                             </div>
                         </div>
+
+                        <div class="p-4 rounded-xl glass-panel flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center shrink-0">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+                            <div>
+                                <div class="text-[10px] uppercase text-slate-400">LinkedIn</div>
+                                <a href="https://www.linkedin.com/company/chezmuna-enterprises/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white hover:text-gold-400 transition">Chezmuna Enterprises</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Commercial Inquiry Form (Direct Email via Formspree) -->
                 <div class="lg:col-span-7">
                     <div class="glass-panel p-8 md:p-10 rounded-3xl border border-white/10">
-                        <form action="https://formspree.io/f/mknlqqry" method="POST" class="space-y-5">
-                            <!-- Hidden recipient indicator -->
-                            <input type="hidden" name="_to" value="chezmuna.enterprises@gmail.com">
-                            <input type="hidden" name="_subject" value="New Commercial Trade Inquiry - Chezmuna Enterprises Portal">
-                            
+                        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
+                            <!-- Get your free access key at https://web3forms.com (registered to chezmuna.enterprises@gmail.com) -->
+                            <input type="hidden" name="access_key" value="56e1393c-747e-4499-84f3-4cefc6038af3">
+                            <input type="hidden" name="subject" value="New Commercial Trade Inquiry - Chezmuna Enterprises Portal">
+                            <input type="hidden" name="from_name" value="Chezmuna Inquiry Form">
+
                             <div class="grid md:grid-cols-2 gap-5">
                                 <div>
                                     <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Entity Name / Buyer Company</label>
@@ -425,19 +514,26 @@
                                     <input type="email" name="email" required placeholder="cpo@company.com" class="w-full bg-brand-950 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-gold-500 outline-none">
                                 </div>
                                 <div>
-                                    <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Primary Transaction Focus</label>
+                                    <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Division / Transaction Focus</label>
                                     <select name="transaction_type" class="w-full bg-brand-950 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-gold-500 outline-none">
-                                        <option value="DRC Grade-A Copper Cathodes">DRC Grade-A Copper Cathodes (99.99%)</option>
-                                        <option value="Local Industrial Raw Material Sourcing (Nigeria)">Local Industrial Raw Material Sourcing (Nigeria)</option>
-                                        <option value="International Commodity Sourcing">International Commodity Sourcing</option>
-                                        <option value="PPP & Infrastructure Advisory">PPP & Trade Infrastructure Advisory</option>
+                                        <optgroup label="Copper Cathodes">
+                                            <option value="DRC Grade-A Copper Cathodes">DRC Grade-A Copper Cathodes (99.99%)</option>
+                                        </optgroup>
+                                        <optgroup label="Industrial Raw Materials">
+                                            <option value="Kraft Paper Feedstock">Kraft Paper Feedstock</option>
+                                            <option value="Local Industrial Raw Material Sourcing (Nigeria)">Local Raw Material Sourcing (Nigeria)</option>
+                                            <option value="International Commodity Sourcing">International Raw Material Sourcing</option>
+                                        </optgroup>
+                                        <optgroup label="Advisory">
+                                            <option value="PPP & Infrastructure Advisory">PPP & Trade Infrastructure Advisory</option>
+                                        </optgroup>
                                     </select>
                                 </div>
                             </div>
 
                             <div>
-                                <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Transaction Specs / Target Tonnage</label>
-                                <textarea name="message" rows="4" required placeholder="Specify target metric tonnage, contract duration (trial vs. rolling), preferred port of destination, or local sourcing requirements..." class="w-full bg-brand-950 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-gold-500 outline-none"></textarea>
+                                <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Transaction Specs / Target Volume</label>
+                                <textarea name="message" rows="4" required placeholder="Specify target tonnage, contract duration, preferred port or delivery location, or sourcing requirements..." class="w-full bg-brand-950 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-gold-500 outline-none"></textarea>
                             </div>
 
                             <button type="submit" class="w-full bg-gold-500 hover:bg-gold-400 text-brand-950 font-bold py-4 rounded-xl transition shadow-xl shadow-gold-500/20 text-sm tracking-wide">
@@ -457,17 +553,30 @@
                 <p>&copy; 2026 Chezmuna Enterprises (BN: OG 6817). All rights reserved.</p>
                 <p class="text-[10px] text-slate-600 mt-1">Executive Trade Facilitation & Sourcing Desk | Lagos, Nigeria</p>
             </div>
-            <div class="flex space-x-6 text-slate-400">
-                <a href="#about" class="hover:text-gold-400 transition">Institutional Profile</a>
-                <a href="#sourcing" class="hover:text-gold-400 transition">Sourcing Matrix</a>
+            <div class="flex items-center space-x-6 text-slate-400">
+                <a href="#about" class="hover:text-gold-400 transition">Profile</a>
+                <a href="#divisions" class="hover:text-gold-400 transition">Divisions</a>
                 <a href="#compliance" class="hover:text-gold-400 transition">Compliance</a>
+                <a href="https://www.linkedin.com/company/chezmuna-enterprises/" target="_blank" rel="noopener noreferrer" aria-label="Chezmuna Enterprises on LinkedIn" class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:text-gold-400 hover:border-gold-400/40 transition">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
             </div>
         </div>
     </footer>
 
-    <!-- Interactive Scripts: Calculator & Active Nav ScrollSpy -->
     <script>
-        // Cargo Calculator
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => {
+                b.classList.remove('active');
+                b.classList.add('bg-white/5', 'text-white');
+            });
+            document.getElementById('panel-' + tab).classList.add('active');
+            const btn = document.getElementById('tab-btn-' + tab);
+            btn.classList.add('active');
+            btn.classList.remove('bg-white/5', 'text-white');
+        }
+
         function calculateTrade() {
             const vol = parseFloat(document.getElementById('volumeInput').value) || 0;
             const rate = parseFloat(document.getElementById('rateInput').value) || 0;
@@ -475,7 +584,6 @@
             document.getElementById('grossResult').innerText = '$' + total.toLocaleString('en-US');
         }
 
-        // Active Navigation Scrollspy Script
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('.nav-link');
