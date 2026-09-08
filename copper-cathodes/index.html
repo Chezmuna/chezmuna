@@ -283,10 +283,11 @@
                         <div>
                             <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Buyer Type</label>
                             <select name="buyer_type" class="w-full bg-brand-950 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-gold-500 outline-none">
-                                <option value="A - End User / Manufacturer">A — End User / Manufacturer</option>
+                                <option value="A - Direct End User">A — Direct End User</option>
                                 <option value="B - Established Importer">B — Established Importer</option>
                                 <option value="C - Commodity Trader">C — Commodity Trader</option>
                                 <option value="D - Broker / Intermediary">D — Broker / Intermediary</option>
+                                <option value="E - Unqualified">E — Unqualified / Not sure</option>
                             </select>
                         </div>
                     </div>
@@ -333,6 +334,19 @@
                         </div>
                     </div>
 
+                    <div class="grid md:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">How did you hear about us?</label>
+                            <select name="source_of_enquiry" class="w-full bg-brand-950 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-gold-500 outline-none">
+                                <option value="Google Search">Google Search</option>
+                                <option value="LinkedIn">LinkedIn</option>
+                                <option value="B2B Platform">B2B Platform (Tradewheel, ExportHub, etc.)</option>
+                                <option value="Referral">Referral</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
                     <div>
                         <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Additional Notes</label>
                         <textarea name="message" rows="4" placeholder="Anything else relevant to your procurement requirement..." class="w-full bg-brand-950 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:border-gold-500 outline-none"></textarea>
@@ -350,43 +364,58 @@
         // Lead scoring — runs client-side just before submit, so the score
         // rides along inside the same Web3Forms email as a normal field.
         // Nothing is shown to the buyer; it's for the notification only.
+        //
+        // Buyer classification GATES the tier. A large volume or DLC payment
+        // instrument from a broker (D) or an unqualified party (E) should
+        // never outrank a smaller, more credible A/B enquiry — so type sets
+        // the ceiling, and the secondary factors only move you within it.
         function computeLeadScore(form) {
-            let score = 0;
-
-            const buyerType = form.buyer_type.value;
-            if (buyerType.startsWith('A')) score += 30;
-            else if (buyerType.startsWith('B')) score += 25;
-            else if (buyerType.startsWith('C')) score += 10;
-            else if (buyerType.startsWith('D')) score += 5;
+            let secondary = 0;
 
             const monthlyQty = parseFloat(form.monthly_quantity.value) || 0;
-            if (monthlyQty >= 3000) score += 25;
-            else if (monthlyQty >= 1000) score += 15;
-            else if (monthlyQty >= 500) score += 8;
-            else if (monthlyQty > 0) score += 3;
+            if (monthlyQty >= 3000) secondary += 25;
+            else if (monthlyQty >= 1000) secondary += 15;
+            else if (monthlyQty >= 500) secondary += 8;
+            else if (monthlyQty > 0) secondary += 3;
 
             const trialQty = parseFloat(form.trial_quantity.value) || 0;
-            if (trialQty > 0) score += 10;
+            if (trialQty > 0) secondary += 10;
 
             const payment = form.payment_instrument.value;
-            if (payment === 'DLC') score += 15;
-            else if (payment === 'LC') score += 12;
-            else score += 5;
+            if (payment === 'DLC') secondary += 15;
+            else if (payment === 'LC') secondary += 12;
+            else secondary += 5;
 
             const freq = form.purchase_frequency.value;
-            if (freq === 'Monthly rolling') score += 15;
-            else if (freq === 'Quarterly') score += 8;
-            else score += 3;
+            if (freq === 'Monthly rolling') secondary += 15;
+            else if (freq === 'Quarterly') secondary += 8;
+            else secondary += 3;
 
-            if (form.website.value.trim()) score += 5;
-            if (form.destination_port.value.trim()) score += 5;
+            if (form.website.value.trim()) secondary += 5;
+            if (form.destination_port.value.trim()) secondary += 5;
+            secondary = Math.min(secondary, 75);
 
-            score = Math.min(score, 100);
+            const buyerType = form.buyer_type.value;
+            let score, tier;
 
-            let tier = 'Cold';
-            if (score >= 70) tier = 'Hot';
-            else if (score >= 40) tier = 'Warm';
+            if (buyerType.startsWith('A')) {
+                score = 25 + secondary;
+                tier = score >= 65 ? 'Hot' : 'Warm';
+            } else if (buyerType.startsWith('B')) {
+                score = 15 + secondary;
+                tier = score >= 75 ? 'Hot' : 'Warm';
+            } else if (buyerType.startsWith('C')) {
+                score = Math.round(secondary * 0.5);
+                tier = 'Cold';
+            } else if (buyerType.startsWith('D')) {
+                score = Math.round(secondary * 0.3);
+                tier = 'Cold';
+            } else {
+                score = 0;
+                tier = 'Unqualified';
+            }
 
+            score = Math.min(Math.max(score, 0), 100);
             return { score, tier };
         }
 
@@ -395,8 +424,9 @@
             this.lead_score.value = score;
             this.lead_tier.value = tier;
 
+            const classification = this.buyer_type.value.charAt(0);
             const company = (this.company_name.value || 'Unknown Company').trim();
-            this.subject.value = `[${tier} LEAD \u2013 Score ${score}/100] Copper Cathode Buyer Registration \u2014 ${company}`;
+            this.subject.value = `[${tier} \u2013 Class ${classification} \u2013 Score ${score}/100] Copper Cathode Buyer Registration \u2014 ${company}`;
         });
     </script>
 
