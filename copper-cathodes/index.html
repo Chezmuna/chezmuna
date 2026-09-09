@@ -79,12 +79,48 @@
                 <a href="/copper-cathodes/shipping-terms/" class="text-slate-300 hover:text-white transition">Shipping Terms</a>
                 <a href="#register" class="text-slate-300 hover:text-white transition">Buyer Registration</a>
             </nav>
-            <a href="#register" class="relative group overflow-hidden rounded-lg p-px font-semibold text-xs uppercase tracking-wider">
-                <span class="absolute inset-0 bg-gradient-to-r from-gold-500 to-amber-300 transition-all duration-300 group-hover:opacity-80"></span>
-                <span class="relative block bg-brand-950 px-5 py-2.5 rounded-[7px] text-white transition group-hover:bg-transparent group-hover:text-brand-950 font-bold">Request Current Offer</span>
-            </a>
+            <div class="flex items-center gap-3">
+                <a href="#register" class="hidden sm:block relative group overflow-hidden rounded-lg p-px font-semibold text-xs uppercase tracking-wider">
+                    <span class="absolute inset-0 bg-gradient-to-r from-gold-500 to-amber-300 transition-all duration-300 group-hover:opacity-80"></span>
+                    <span class="relative block bg-brand-950 px-5 py-2.5 rounded-[7px] text-white transition group-hover:bg-transparent group-hover:text-brand-950 font-bold">Request Current Offer</span>
+                </a>
+                <button id="mobileMenuBtn" type="button" aria-label="Toggle menu" aria-expanded="false" class="lg:hidden w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white">
+                    <i class="fa-solid fa-bars" id="mobileMenuIcon"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 px-6 py-4 bg-brand-950/95">
+                <a href="#specification" class="block text-slate-300 hover:text-white transition py-2 text-sm">Specification</a>
+                <a href="/copper-cathodes/for-manufacturers/" class="block text-slate-300 hover:text-white transition py-2 text-sm">For Manufacturers</a>
+                <a href="/copper-cathodes/shipping-terms/" class="block text-slate-300 hover:text-white transition py-2 text-sm">Shipping Terms</a>
+                <a href="#register" class="block text-slate-300 hover:text-white transition py-2 text-sm">Buyer Registration</a>
+            <a href="#register" class="block mt-3 bg-gold-500 text-brand-950 font-bold px-5 py-3 rounded-xl text-center text-sm">Request Current Offer</a>
         </div>
     </header>
+
+    <script>
+        (function () {
+            var btn = document.getElementById('mobileMenuBtn');
+            var menu = document.getElementById('mobileMenu');
+            var icon = document.getElementById('mobileMenuIcon');
+            if (!btn || !menu) return;
+            function closeMenu() {
+                menu.classList.add('hidden');
+                btn.setAttribute('aria-expanded', 'false');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+            btn.addEventListener('click', function () {
+                var nowHidden = menu.classList.toggle('hidden');
+                btn.setAttribute('aria-expanded', String(!nowHidden));
+                icon.classList.toggle('fa-bars', nowHidden);
+                icon.classList.toggle('fa-xmark', !nowHidden);
+            });
+            menu.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', closeMenu);
+            });
+        })();
+    </script>
 
     <!-- Hero -->
     <section class="relative pt-24 pb-20 lg:pt-32 lg:pb-28 overflow-hidden border-b border-white/5">
